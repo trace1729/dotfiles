@@ -1,0 +1,11 @@
+[Default Applications]
+application/pdf=org.pwmt.zathura.desktop
+text/html=google-chrome.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/unknown=google-chrome.desktop
+
+[Added Associations]
+text/markdown=org.gnome.gedit.desktop;nvim.desktop;org.pwmt.zathura-pdf-poppler.desktop;org.gnome.Evince.desktop;vim.desktop;
+text/x-tex=org.gnome.gedit.desktop;

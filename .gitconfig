@@ -1,0 +1,8 @@
+[safe]
+	directory = /home/trace/learning/cs61c/sp22-lab-starter
+	directory = *
+[user]
+	name = trace
+	email = 1106029170@qq.com
+[core]
+	editor = vim
