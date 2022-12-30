@@ -166,3 +166,7 @@ alias gds='git diff --staged'
 alias gdt='git diff-tree --no-commit-id --name-only -r'
 alias gdup='git diff @{upstream}'
 alias gdw='git diff --word-diff'
+
+
+alias f2html_w='vim -c "colorscheme shine" -c %TOhtml -c wq -c wq '
+alias f2html_b='vim -c %TOhtml -c wq -c wq '

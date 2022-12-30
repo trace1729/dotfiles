@@ -147,20 +147,6 @@ export OpenCV_DIR=/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig.cmake
 export RANGER_LOAD_DEFAULT_RC=FALSE
 
 
-# $ find /path/to/search -type f -exec grep -l "your-search-string" {} \
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/root/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/root/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/root/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/root/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
+alias f2html_w='vim -c "colorscheme shine" -c %TOhtml -c wq -c wq '
+alias f2html_b='vim -c %TOhtml -c wq -c wq '
