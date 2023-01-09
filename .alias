@@ -64,14 +64,22 @@ alias gdup='git diff @{upstream}'
 alias gdw='git diff --word-diff'
 
 
-alias f2html_w='vim -c "colorscheme shine" -c %TOhtml -c wq -c wq '
-alias f2html_b='vim -c %TOhtml -c wq -c wq '
 alias m='make '
 alias mc='make clean'
+alias n='nvim '
 alias v='vim '
 alias c='code '
 alias py='python '
 alias r='ranger'
 alias b='./build.sh'
-alias f2html_w='vim -c "colorscheme shine" -c %TOhtml -c wq -c wq '
+alias f2html_w='vim -c "colorscheme one" -c %TOhtml -c wq -c wq '
 alias f2html_b='vim -c %TOhtml -c wq -c wq '
+alias time_vim='vim --startuptime ~/tmp/vim_log'
+
+alias run='gradle build
+gradle run'
+# sudo du -h --max-depth=1 {} 查看硬盘占用空间
+# sudo find / -name '*' -size +500M
+alias npm='pnpm'
+alias t=tmux
+#find . -type f ! -name '*.tex' | xargs rm
