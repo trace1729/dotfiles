@@ -1,0 +1,237 @@
+"=======================
+" ==== Basic Settings
+"=======================
+set rnu
+let mapleader=" "
+
+noremap <silent> i k
+noremap <silent> j h
+noremap <silent> k j
+noremap <silent> z i
+noremap <silent> K 5j
+noremap <silent> J 7h
+noremap <silent> L 7l
+noremap <silent> Z I
+noremap <silent> ; :
+
+" visual block mode
+noremap <silent> <C-a> <C-v>
+
+" vnoremap ; :
+vnoremap ' "
+vmap p "_dp
+
+" U/E keys for 5 times u/e (faster navigation)
+noremap <silent> I 5k
+noremap <silent> K 5j
+" N key: go to the start of the line
+noremap <silent> J 0
+" I key: go to the end of the line
+noremap <silent> E $
+" Faster in-line navigation
+noremap W 5w
+noremap B 5b
+" set h (same as n, cursor left) to 'end of word'
+" Ctrl + U or E will move up/down the view port without moving the cursor
+noremap <C-U> 5<C-y>
+noremap <C-E> 5<C-e>
+noremap <CR> o<ESC>
+
+" ==================== Insert Mode Cursor Movement ====================
+inoremap <C-a> <ESC>A
+inoremap ,, <ESC>o
+
+
+" ==================== Command Mode Cursor Movement ====================
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+cnoremap <C-b> <Left>
+cnoremap <C-f> <Right>
+cnoremap <M-b> <S-Left>
+cnoremap <M-w> <S-Right>
+
+
+" ==================== Window management ====================
+" Use <space> + new arrow keys for moving the cursor around windows
+"noremap <LEADER>i <C-w>w
+noremap <SPACE><up>   <C-w>k
+noremap <SPACE><left>  <C-w>h
+noremap <SPACE><down>  <C-w>j
+noremap <SPACE><right> <C-w>l
+noremap qf <C-w>o
+" Disable the default s key
+noremap s <nop>
+
+map ,s :source ~/.ideavimrc<cr>
+
+" split the screens to up (horizontal), down (horizontal), left (vertical), right (vertical)
+map sr :set splitright<CR>:vsplit<CR>
+map sl :set nosplitright<CR>:vsplit<CR>
+map su :set nosplitbelow<CR>:split<CR>
+map sd :set splitbelow<CR>:split<CR>
+
+" Press <SPACE> + q to close the window below the current window
+noremap <LEADER>q <C-w>j:q<CR>
+
+
+" ==================== Tab management ====================
+" Create a new tab with tu
+map <S-r> :tabnext<CR>
+map <S-e> :tabprevious<CR>
+
+
+
+set keep-english-in-normal
+
+"=======================
+" ==== Plugins
+"=======================
+
+Plug 'tpope/vim-surround'
+Plug 'preservim/nerdtree'
+
+
+
+" ================================================================================================
+" 👻👻👻 Which-Key 👻👻👻
+" ================================================================================================
+" To provide custom names for prefixes and commands we need to configure one variable for every mapping:
+" The naming convention for which-key is 
+"		1. variable must start with `g:WhichKeyDesc_` in order to be recognized by
+"		the plugin 
+"		2. the rest of it can be set to whatever fits you:
+"		3. value is split into(space separated)two parts
+"			1. mappings.
+"			2. description.
+set which-key
+set notimeout
+
+" disable the timeout option
+set notimeout
+
+" increase the timeoutlen (default: 1000), don't add space around the equal sign =
+set timeoutlen=5000
+
+"hello world"
+
+" d: diff
+nmap <leader>dd <action>(Vcs.ShowTabbedFileHistory)
+
+" f: Find/Format ⭐️
+let g:WhichKeyDesc_FindOrFormat_FindFile = "<leader>ff FindFile"
+nmap <leader>ff <action>(GotoFile)
+
+let g:WhichKeyDesc_FindOrFormat_FindFileLocation = "<leader>fl FindFileLocation"
+nmap <leader>fl <action>(SelectInProjectView)
+
+let g:WhichKeyDesc_FindOrFormat_FindText = "<leader>ft FindText"
+nmap <leader>ft <action>(FindInPath)
+
+let g:WhichKeyDesc_FindOrFormat_Commands = "<leader>fc Commands"
+nmap <leader>fc <action>(GotoAction)
+
+let g:WhichKeyDesc_FindOrFormat_OpenedProject = "<leader>fp OpenedProject"
+nmap <leader>fp <action>(OpenProjectWindows)
+
+let g:WhichKeyDesc_FindOrFormat_Format = "<leader>fm Format"
+nmap <leader>fm <action>(ReformatCode) \| <action>(OptimizeImports)
+
+" g: Git ⭐️
+let g:WhichKeyDesc_Git = "<leader>g Git"
+let g:WhichKeyDesc_Git_RollbackHunk = "<leader>gr RollbackHunk"
+nmap <leader>gr :action Vcs.RollbackChangedLines<CR>
+
+" i: Insert ⭐️
+let g:WhichKeyDesc_InsertAfterBrackets = "<leader>i InsertAfterBrackets"
+nmap <leader>i f(a
+
+" j: add Semicolon and goto nextline⭐️
+let g:WhichKeyDesc_InsertSemicolon = "<leader>j InsertSemicolon"
+nmap <leader>j A;<ESC>o
+
+
+" s: Show ⭐️
+let g:WhichKeyDesc_Show = "<leader>s Show"
+let g:WhichKeyDesc_Show_FileStructure = "<leader>ss ShowFileStructure"
+nmap <leader>ss <action>(FileStructurePopup)
+let g:WhichKeyDesc_Show_Bookmarks = "<leader>sb ShowBookmarks"
+nmap <leader>sb <action>(ShowBookmarks)
+let g:WhichKeyDesc_Show_ParameterInfo = "<leader>sb ShowParameterInfo"
+nmap <leader>sp <action>(ParameterInfo)
+
+" r: Run/Re ⭐️
+let g:WhichKeyDesc_RunOrRe = "<leader>r Run"
+nmap <leader>rr <action>(Run)
+let g:WhichKeyDesc_RunOrRe_ReRunTests = "<leader>rt ReRunTests"
+nmap <leader>rt <action>(RerunTests)
+let g:WhichKeyDesc_RunOrRe_Rename = "<leader>rn Rename"
+map <leader>rn <action>(RenameElement)
+
+" w: Window ⭐️
+"let g:WhichKeyDesc_Windows = "<leader>w Windows"
+"let g:WhichKeyDesc_Windows_maximize = "<leader>wo maximize"
+"nmap <leader>wo <action>(UnsplitAll) \| <action>(HideAllWindows)
+"let g:WhichKeyDesc_Windows_splitWindowVertically = "<leader>wl splitWindowVertically"
+"nmap <leader>wl <action>(Macro.SplitVertically)
+"let g:WhichKeyDesc_Windows_closeActiveWindow = "<leader>wc closeActiveWindow"
+"nmap <leader>wc <c-w>c
+
+" z: zip(fold) ⭐️
+let g:WhichKeyDesc_Zip = "<leader>z Zip"
+let g:WhichKeyDesc_Zip_unZipAll = "<leader>zo unZipAll"
+nmap <leader>zo <action>(ExpandAllRegions)
+let g:WhichKeyDesc_Zip_ZipAll = "<leader>zc ZipAll"
+nmap <leader>zc <action>(CollapseAllRegions)
+
+" c: Close ⭐️;
+let g:WhichKeyDesc_CloseBuffer = "<leader>c CloseBuffer"
+nmap <leader>c :q!<CR>
+
+" e: Toggle Explorer ⭐️
+let g:WhichKeyDesc_ToggleExplorerOrExtract = "<leader>e ToggleExplorer"
+nmap <leader>e <action>(ActivateProjectToolWindow)
+" e: Extract
+" extract method/function
+vmap <leader>em <action>(ExtractMethod)
+" extract constant
+vmap <leader>ec <action>(IntroduceConstant)
+" extract field
+vmap <leader>ef <action>(IntroduceField)
+" extract variable
+vmap <leader>ev <action>(IntroduceVariable)
+
+
+"============
+"=== Nerdtree
+"============
+noremap tt :NERDTreeToggle<CR>
+
+
+"============
+"=== my configration
+"============
+
+
+"nmap <leader>dd <action>(Vcs.ShowTabbedFileHistory)
+"nmap <leader>ff <action>(GotoFile)
+"nmap <leader>fl <action>(SelectInProjectView)
+"nmap <leader>ft <action>(FindInPath)
+"nmap <leader>fc <action>(GotoAction)
+"nmap <leader>fp <action>(OpenProjectWindows)
+"nmap <leader>fm <action>(ReformatCode) \| <action>(OptimizeImports)
+"nmap <leader>gr :action Vcs.RollbackChangedLines<CR>
+"nmap <leader>i f(a
+"nmap <leader>j A;<ESC>o
+"nmap <leader>ss <action>(FileStructurePopup)
+"nmap <leader>sb <action>(ShowBookmarks)
+"nmap <leader>sp <action>(ParameterInfo)
+"nmap <leader>rr <action>(Rerun)
+"nmap <leader>rt <action>(RerunTests)
+"map <leader>rn <action>(RenameElement)
+"nmap <leader>zo <action>(ExpandAllRegions)
+"nmap <leader>zc <action>(CollapseAllRegions)
+"nmap <leader>c :q!<CR>
+"nmap <leader>e <action>(ActivateProjectToolWindow)
+"vmap <leader>em <action>(ExtractMethod)
