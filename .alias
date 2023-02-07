@@ -74,7 +74,7 @@ alias r='ranger'
 alias b='./build.sh'
 alias f2html_w='vim -c "colorscheme one" -c %TOhtml -c wq -c wq '
 alias f2html_b='vim -c %TOhtml -c wq -c wq '
-alias time_vim='vim --startuptime ~/tmp/vim_log'
+alias time_vim='nvim --startuptime ~/tmp/vim_log'
 
 alias run='gradle build
 gradle run'
@@ -83,3 +83,5 @@ gradle run'
 alias npm='pnpm'
 alias t=tmux
 #find . -type f ! -name '*.tex' | xargs rm
+alias clock='nvim -c Calendar -view=clock -position=here'
+alias lg="lazygit "
