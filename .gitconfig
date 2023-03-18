@@ -1,0 +1,7 @@
+[user]
+	name = trace
+	email = 1106029170@qq.com
+[core]
+	editor = vim
+[http "https://github.com"]
+	proxy = http://127.0.0.1:7890
