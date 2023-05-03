@@ -43,7 +43,6 @@ noremap <silent> Z I
 
 
 " visual block mode
-noremap <silent> <C-a> <C-v>
 " vnoremap ; :
 " nnoremap <silent> ' "
 
@@ -78,6 +77,8 @@ noremap <SPACE><left>  <C-w>h
 noremap <SPACE><down>  <C-w>j
 noremap <SPACE><right> <C-w>l
 noremap qf <C-w>o
+" Disable the default s key
+noremap s <nop>
 
 
 " split the screens to up (horizontal), down (horizontal), left (vertical), right (vertical)
