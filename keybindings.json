@@ -1,0 +1,26 @@
+// Place your key bindings in this file to override the defaults
+[
+{
+  "key": "ctrl+alt+t",  // you could use     "key": "ctrl+`",  if you wish
+  "command": "workbench.action.closePanel",
+  "when": "terminalFocus"
+},
+
+{
+  "key": "ctrl+alt+t",
+  "command": "workbench.action.toggleMaximizedPanel",
+  "when": "!terminalFocus"
+},
+{
+  "key": "ctrl+shift+alt+a",
+  "command": "workbench.action.tasks.runTask"
+},
+{ 
+	"key": "tab",     
+ 	"command": "selectNextSuggestion",
+	"when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible" },
+{ 
+	"key": "tab",                   
+	"command": "-acceptSelectedSuggestion"
+},
+]
