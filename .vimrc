@@ -4,9 +4,40 @@ filetype on
 filetype indent on
 filetype plugin on 
 filetype plugin indent on
-set softtabstop=2
-set scrolloff=5
+set autochdir
+set exrc
+set secure
+set number
+set relativenumber
+set cursorline
+set noexpandtab
 set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set autoindent
+set list
+set listchars=tab:\|\ ,trail:▫
+set scrolloff=4
+set ttimeoutlen=0
+set notimeout
+set viewoptions=cursor,folds,slash,unix
+set wrap
+set tw=0
+set indentexpr=
+set foldmethod=indent
+set foldlevel=99
+set foldenable
+set formatoptions-=tc
+set splitright
+set splitbelow
+set noshowmode
+set ignorecase
+set smartcase
+set shortmess+=c
+set inccommand=split
+set completeopt=longest,noinsert,menuone,noselect,preview
+set lazyredraw
+set visualbell
 set rnu
 set mouse=a
 set conceallevel=2 " 这里建议写成2，写1时替换后的效果不好看nmap d( di(va(p

@@ -3,6 +3,7 @@
 let mapleader=" "
 nnoremap Q :q<CR>
 nnoremap S :w<CR>
+set rnu
 
 " Find pair
 noremap ,. %
