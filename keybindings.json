@@ -23,4 +23,33 @@
 	"key": "tab",                   
 	"command": "-acceptSelectedSuggestion"
 },
+{
+  "key": "ctrl+shift+k",
+  "command": "workbench.action.terminal.focusNextPane",
+  "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+},
+{
+  "key": "alt+right",
+  "command": "-workbench.action.terminal.focusNextPane",
+  "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+},
+{
+  "key": "alt+down",
+  "command": "-workbench.action.terminal.focusNextPane",
+  "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+},
+{
+  "key": "ctrl+shift+j",
+  "command": "workbench.action.terminal.focusPrevious",
+  "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+},
+{
+  "key": "ctrl+pageup",
+  "command": "-workbench.action.terminal.focusPrevious",
+  "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+},
+{
+  "key": "ctrl+shift+r",
+  "command": "jupyter.runFileInteractive"
+},
 ]

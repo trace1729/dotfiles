@@ -16,8 +16,6 @@ noremap <silent> ; :
 
 " visual block mode
 
-" vnoremap ; :
-vnoremap ' "
 vmap p "_dp
 
 " U/E keys for 5 times u/e (faster navigation)
@@ -37,7 +35,6 @@ noremap <C-E> 5<C-e>
 
 " ==================== Insert Mode Cursor Movement ====================
 inoremap <C-a> <ESC>A
-inoremap ,, <ESC>o
 
 
 " ==================== Command Mode Cursor Movement ====================

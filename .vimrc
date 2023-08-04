@@ -29,16 +29,15 @@ set foldenable
 set formatoptions-=tc
 set splitright
 set splitbelow
-set noshowmode
+"set noshowmode
 set ignorecase
 set smartcase
 set shortmess+=c
 set completeopt=longest,noinsert,menuone,noselect,preview
 set lazyredraw
-set visualbell
 set rnu
 set mouse=a
-set conceallevel=2 " 这里建议写成2，写1时替换后的效果不好看nmap d( di(va(p
+set conceallevel=3 " 这里建议写成2，写1时替换后的效果不好看nmap d( di(va(p
 
 " ==================== Basic Mappings ====================
 let mapleader=" "
@@ -134,7 +133,7 @@ map tl :tabnext<CR>
 map th :tabprevious<CR>
 map t0 :tablast<CR>
 map t$ :tabfirst<CR>
-map r :call CompileRunGcc()<CR>
+map R :call CompileRunGcc()<CR>
 
 
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
