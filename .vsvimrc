@@ -6,8 +6,8 @@ nnoremap S :w<CR>
 set rnu
 
 " Find pair
-noremap ,. %
-vnoremap ki $%
+"noremap ,. %
+"vnoremap ki $%
 noremap <silent> <LEADER>o za
 
 " insert a pair of {} and go to the next line
@@ -84,3 +84,10 @@ noremap srv <C-w>b<C-w>H
 noremap <LEADER>q <C-w>j:q<CR>
 
 
+" ==================== Tab management ====================
+" Create a new tab with tu
+map <leader>n :tabnew<CR>
+map tl :tabnext<CR>
+map th :tabprevious<CR>
+map t0 :tablast<CR>
+map t$ :tabfirst<CR>

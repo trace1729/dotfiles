@@ -47,7 +47,6 @@ nnoremap S :w<CR>
 vnoremap Y "+y
 " Find pair
 noremap ,. %
-vnoremap ki $%
 noremap <silent> <LEADER>o za
 
 " insert a pair of {} and go to the next line

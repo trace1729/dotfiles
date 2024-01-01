@@ -62,6 +62,11 @@ alias gds='git diff --staged'
 alias gdt='git diff-tree --no-commit-id --name-only -r'
 alias gdup='git diff @{upstream}'
 alias gdw='git diff --word-diff'
+alias lazycommit="git add -A 
+git commit -m 'update' 
+git push 
+"
+alias upload="ssh ali -t \"cd ~/repo/blog/docs/notes && git pull\""
 
 
 alias m='make '
@@ -76,8 +81,6 @@ alias f2html_w='vim -c "colorscheme one" -c %TOhtml -c wq -c wq '
 alias f2html_b='vim -c %TOhtml -c wq -c wq '
 alias time_vim='nvim --startuptime ~/tmp/vim_log'
 
-alias run='gradle build
-gradle run'
 # sudo du -h --max-depth=1 {} 查看硬盘占用空间
 # sudo find / -name '*' -size +500M
 alias npm='pnpm'
@@ -85,3 +88,17 @@ alias t=tmux
 #find . -type f ! -name '*.tex' | xargs rm
 alias clock='nvim -c Calendar -view=clock -position=here'
 alias lg="lazygit "
+alias c="clear"
+alias cw='cowsay '
+alias unset='unset http_proxy \
+unset https_proxy \
+unset no_proxy \
+'
+
+# alias find='fd '
+alias rm='rm -i '
+# alias gcc='gcc-9 '
+alias py=python
+alias xc='xclip -sel clip '
+# alias make='make -j '
+# export JAVA_OPTS="-Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=7890"

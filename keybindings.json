@@ -1,55 +1,26 @@
 // Place your key bindings in this file to override the defaults
 [
-{
-  "key": "ctrl+alt+t",  // you could use     "key": "ctrl+`",  if you wish
-  "command": "workbench.action.closePanel",
-  "when": "terminalFocus"
-},
-
-{
-  "key": "ctrl+alt+t",
-  "command": "workbench.action.toggleMaximizedPanel",
-  "when": "!terminalFocus"
-},
-{
-  "key": "ctrl+shift+alt+a",
-  "command": "workbench.action.tasks.runTask"
-},
-{ 
-	"key": "tab",     
- 	"command": "selectNextSuggestion",
-	"when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible" },
-{ 
-	"key": "tab",                   
-	"command": "-acceptSelectedSuggestion"
-},
-{
-  "key": "ctrl+shift+k",
-  "command": "workbench.action.terminal.focusNextPane",
-  "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-},
-{
-  "key": "alt+right",
-  "command": "-workbench.action.terminal.focusNextPane",
-  "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-},
-{
-  "key": "alt+down",
-  "command": "-workbench.action.terminal.focusNextPane",
-  "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-},
-{
-  "key": "ctrl+shift+j",
-  "command": "workbench.action.terminal.focusPrevious",
-  "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
-},
-{
-  "key": "ctrl+pageup",
-  "command": "-workbench.action.terminal.focusPrevious",
-  "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
-},
-{
-  "key": "ctrl+shift+r",
-  "command": "jupyter.runFileInteractive"
-},
+  {
+    "key": "ctrl+alt+t", // you could use     "key": "ctrl+`",  if you wish
+    "command": "workbench.action.closePanel",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+alt+t",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "-extension.vim_ctrl+p",
+    "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+  },
+  {
+    "key": "ctrl+shift+j",
+    "command": "workbench.action.terminal.focusNext"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "workbench.action.terminal.focusPrevious"
+  }
 ]
