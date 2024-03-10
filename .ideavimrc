@@ -13,6 +13,8 @@ noremap <silent> J 7h
 noremap <silent> L 7l
 noremap <silent> Z I
 noremap <silent> ; :
+set noerrorbells
+set visualbell
 
 " visual block mode
 
