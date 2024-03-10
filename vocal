@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+<head>
+    <title>Vocal Subscriptions Export</title>
+    <dateCreated>2024-01-30T17:43:53+0800</dateCreated>
+    <dateModified>2024-01-30T17:43:53+0800</dateModified>
+</head>
+<body>
+    <outline text="EmacsTalk" type="rss" xmlUrl="https://emacstalk.codeberg.page/podcast/index.xml"/>
+    <outline text="Luke%27s ENGLISH Podcast - Learn British English with Luke Thompson" type="rss" xmlUrl="https://access.acast.com/rss/62b0ada25c7ea10012f541cb/"/>
+    <outline text="Not Related! A Big-Braned Podcast" type="rss" xmlUrl="https://notrelated.xyz/rss"/>
+    <outline text="一席YiXi" type="rss" xmlUrl="https://www.ximalaya.com/album/242812.xml"/>
+    <outline text="代码之外 Beyond Code" type="rss" xmlUrl="https://feed.xyzfm.space/nfm8cu8deycn"/>
+    <outline text="内核恐慌" type="rss" xmlUrl="https://pan.icu/feed"/>
+    <outline text="黑水公园" type="rss" xmlUrl="https://www.ximalaya.com/album/3558668.xml"/>
+    
+</body>
+</opml>

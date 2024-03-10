@@ -82,6 +82,10 @@ noremap <LEADER>q <C-w>j:q<CR>
 " Create a new tab with tu
 map <S-r> :tabnext<CR>
 map <S-e> :tabprevious<CR>
+map tl :tabnext<CR>
+map th :tabprevious<CR>
+map t0 :tablast<CR>
+map t$ :tabfirst<CR>
 
 
 
